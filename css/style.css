@@ -837,3 +837,49 @@ box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 .match-shot-info-bottom div ul li:last-child span:first-child{
     margin: 0 0 0 55px;
 }
+.fixture{
+    text-align: center;
+    background-color: #eee;
+}
+.postponed{
+    color: red;
+    margin: 0 10px;
+}
+.top-scorer, .top-assists, .top-xg, .top-xa, .top-shots{
+    display: inline-block;
+    background-color: #fff;
+    width: 48%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+@media only screen and (max-width: 1126px) {
+    .top-scorer, .top-assists, .top-xg, .top-xa, .top-shots{
+        display: inline-block;
+        background-color: #fff;
+        width: 47%;
+        border-radius: 10px;
+        text-align: center;
+        margin: 10px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .top-scorer, .top-assists, .top-xg, .top-xa, .top-shots{
+        display: inline-block;
+        background-color: #fff;
+        width: 95%;
+        border-radius: 10px;
+        text-align: center;
+        margin: 10px;
+    }
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+/* table tr{
+    border-top: 1px solid #dbd1d1;
+} */
+tr:nth-child(even){
+    background-color: #eee;
+}
