@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
 @font-face {
     font-family: 'Vazir';
-    src: url(../football/fonts/vazir/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.ttf);
+    src: url(../fonts/vazir/Farsi-Digits-Without-Latin/Vazir-Light-FD-WOL.ttf);
 }
 html{
     background-color: #eee;
