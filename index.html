@@ -1,1 +1,611 @@
-<h1 style="color: red;">Hello Hamed</h1>
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>پریمیر لیگ</title>
+    <link rel="stylesheet" href="/static/epl/css/epl.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330.242 330.242" width="30px" height="30px"><path d="M324.442,129.811l-41.321-33.677V42.275c0-6.065-4.935-11-11-11h-26c-6.065,0-11,4.935-11,11v14.737l-55.213-44.999 c-3.994-3.254-9.258-5.047-14.822-5.047c-5.542,0-10.781,1.782-14.753,5.019L5.8,129.81c-6.567,5.351-6.173,10.012-5.354,12.314 c0.817,2.297,3.448,6.151,11.884,6.151h19.791v154.947c0,11.058,8.972,20.053,20,20.053h62.5c10.935,0,19.5-8.809,19.5-20.053 v-63.541c0-5.446,5.005-10.405,10.5-10.405h42c5.238,0,9.5,4.668,9.5,10.405v63.541c0,10.87,9.388,20.053,20.5,20.053h61.5 c11.028,0,20-8.996,20-20.053V148.275h19.791c8.436,0,11.066-3.854,11.884-6.151C330.615,139.822,331.009,135.161,324.442,129.811z"/></svg></a></li>
+                <li><a href="/league/pl">پریمیر لیگ</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-mobile">
+            <ul>
+                <li id="navbar-toggler-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" viewBox="0 0 122.88 95.95"><g><path d="M8.94,0h105c4.92,0,8.94,4.02,8.94,8.94l0,0c0,4.92-4.02,8.94-8.94,8.94h-105C4.02,17.88,0,13.86,0,8.94l0,0 C0,4.02,4.02,0,8.94,0L8.94,0z M8.94,78.07h105c4.92,0,8.94,4.02,8.94,8.94l0,0c0,4.92-4.02,8.94-8.94,8.94h-105 C4.02,95.95,0,91.93,0,87.01l0,0C0,82.09,4.02,78.07,8.94,78.07L8.94,78.07z M8.94,39.03h105c4.92,0,8.94,4.02,8.94,8.94l0,0 c0,4.92-4.02,8.94-8.94,8.94h-105C4.02,56.91,0,52.89,0,47.97l0,0C0,43.06,4.02,39.03,8.94,39.03L8.94,39.03z"></path></g></svg></li>
+            </ul>
+            <ul class="navbar-mobile-content" id="navbar-mobile-content">
+                <li><a href="/"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330.242 330.242" width="30px" height="30px"><path d="M324.442,129.811l-41.321-33.677V42.275c0-6.065-4.935-11-11-11h-26c-6.065,0-11,4.935-11,11v14.737l-55.213-44.999 c-3.994-3.254-9.258-5.047-14.822-5.047c-5.542,0-10.781,1.782-14.753,5.019L5.8,129.81c-6.567,5.351-6.173,10.012-5.354,12.314 c0.817,2.297,3.448,6.151,11.884,6.151h19.791v154.947c0,11.058,8.972,20.053,20,20.053h62.5c10.935,0,19.5-8.809,19.5-20.053 v-63.541c0-5.446,5.005-10.405,10.5-10.405h42c5.238,0,9.5,4.668,9.5,10.405v63.541c0,10.87,9.388,20.053,20.5,20.053h61.5 c11.028,0,20-8.996,20-20.053V148.275h19.791c8.436,0,11.066-3.854,11.884-6.151C330.615,139.822,331.009,135.161,324.442,129.811z"/></svg></a></li>
+                <li><a href="/league/pl">پریمیر لیگ</a></li>
+                <li><a href="">بوندسلیگا آلمان</a></li>
+                <li><a href="">لالیگا اسپانیا</a></li>
+                <li><a href="">لیگ یک فرانسه</a></li>
+                <li><a href="">سری آ ایتالیا</a></li>
+            </ul>
+        </div>
+    </header>
+    
+<div class="league-header">
+    <div class="league-header-top">
+        <img src="/static/images/PremierLeague.png" width="50px" height="50px" alt="">
+        <span>پریمیر لیگ انگلیس</span>
+    </div>
+    <div class="league-header-bottom">
+        <ul id="navigation">
+            <div>
+                <li class="active">برنامه بازی ها</li>
+                <li name="table">جدول</li>
+                <li name="top-player">بازیکنان برتر</li>
+            </div>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    
+    <div class="content">
+        <div class="week">
+            
+            <button data-week="2" class="week-button next-week-button">
+                <a href="?round=2">
+                    <svg width="20px" height="20px" viewBox="0 0 91 91" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+                        <g roke-width="0"/>
+                        <g fill="#27c794"><g> <path class="st0" d="M36.6,43.5C31.1,49,25.7,54.8,20.7,60.8c-5.1,6.2-12,13.7-12.7,21.9c-0.1,1.3,1.5,2.5,2.7,2 c7.7-3.1,13.1-11.4,18.6-17.4c6.7-7.3,13.6-14.4,20.9-21c2.8-2.5,1.9-7.3-1.2-9.1C36.3,30,27,18.8,19.7,6.2 C15-1.9,2.2,5.6,7.2,13.5C14.8,25.7,24.6,35.8,36.6,43.5z"/> <path class="st0" d="M72.9,43.5C67.3,49,62,54.8,57,60.8C52,67.1,45,74.5,44.3,82.7c-0.1,1.3,1.5,2.5,2.7,2 c7.7-3.1,13.1-11.4,18.6-17.4c6.7-7.3,13.6-14.4,20.9-21c2.8-2.5,1.9-7.3-1.2-9.1C72.6,30,63.3,18.8,56,6.2 c-4.7-8.1-17.5-0.6-12.5,7.3C51.1,25.7,60.9,35.8,72.9,43.5z"/> </g> </g>
+                    </svg>
+                </a>
+            </button>
+            <span>هفته 1</span>
+            
+            <button data-week="0" class="week-button per-week-button" disabled>
+                <svg width="20px" height="20px" viewBox="0 0 91 91" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" transform="rotate(180)">
+                    <g roke-width="0"/>
+                    <g fill="#27c794"><g> <path class="st0" d="M36.6,43.5C31.1,49,25.7,54.8,20.7,60.8c-5.1,6.2-12,13.7-12.7,21.9c-0.1,1.3,1.5,2.5,2.7,2 c7.7-3.1,13.1-11.4,18.6-17.4c6.7-7.3,13.6-14.4,20.9-21c2.8-2.5,1.9-7.3-1.2-9.1C36.3,30,27,18.8,19.7,6.2 C15-1.9,2.2,5.6,7.2,13.5C14.8,25.7,24.6,35.8,36.6,43.5z"/> <path class="st0" d="M72.9,43.5C67.3,49,62,54.8,57,60.8C52,67.1,45,74.5,44.3,82.7c-0.1,1.3,1.5,2.5,2.7,2 c7.7-3.1,13.1-11.4,18.6-17.4c6.7-7.3,13.6-14.4,20.9-21c2.8-2.5,1.9-7.3-1.2-9.1C72.6,30,63.3,18.8,56,6.2 c-4.7-8.1-17.5-0.6-12.5,7.3C51.1,25.7,60.9,35.8,72.9,43.5z"/> </g> </g>
+                </svg>
+            </button>
+        </div>
+        
+        
+        <div class="fixtures-date">
+            <span>14 / 05 / 1401</span>
+        </div>
+        
+        <div class="match">
+            <a href="/team/78/crystal-palace/2022" class="match-home-team">
+                <span class="team-name">کریستال پالاس</span>
+                <img src="/medias/teamlogo/CrystalPalace.png" width="27px" alt="کریستال پالاس">
+            </a>
+            
+            <a href="/match/18202" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">0</span>
+                    <span>-</span>
+                    <span class="away-team-goal">2</span>
+                </div>
+                <div class="xg">
+                    <span class="loser">1.21</span>
+                    <span>-</span>
+                    <span class="winner">1.44</span>
+                </div>
+            </a>
+            
+            <a href="/team/83/arsenal/2022" class="match-away-team">
+                <img src="/medias/teamlogo/Arsenal.png" width="27px" alt="آرسنال">
+                <span class="team-name">آرسنال</span>
+            </a>
+        </div>
+        
+        
+        <div class="fixtures-date">
+            <span>15 / 05 / 1401</span>
+        </div>
+        
+        <div class="match">
+            <a href="/team/228/fulham/2022" class="match-home-team">
+                <span class="team-name">فولام</span>
+                <img src="/medias/teamlogo/Fulham.png" width="27px" alt="فولام">
+            </a>
+            
+            <a href="/match/18203" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">2</span>
+                    <span>-</span>
+                    <span class="away-team-goal">2</span>
+                </div>
+                <div class="xg">
+                    <span class="draw">1.27</span>
+                    <span>-</span>
+                    <span class="draw">2.34</span>
+                </div>
+            </a>
+            
+            <a href="/team/87/liverpool/2022" class="match-away-team">
+                <img src="/medias/teamlogo/Liverpool.png" width="27px" alt="لیورپول">
+                <span class="team-name">لیورپول</span>
+            </a>
+        </div>
+        <div class="match">
+            <a href="/team/73/bournemouth/2022" class="match-home-team">
+                <span class="team-name">بورنموث</span>
+                <img src="/medias/teamlogo/Bournemouth.png" width="27px" alt="بورنموث">
+            </a>
+            
+            <a href="/match/18204" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">2</span>
+                    <span>-</span>
+                    <span class="away-team-goal">0</span>
+                </div>
+                <div class="xg">
+                    <span class="winner">0.59</span>
+                    <span>-</span>
+                    <span class="loser">0.49</span>
+                </div>
+            </a>
+            
+            <a href="/team/71/aston-villa/2022" class="match-away-team">
+                <img src="/medias/teamlogo/AstonVilla.png" width="27px" alt="استون ویلا">
+                <span class="team-name">استون ویلا</span>
+            </a>
+        </div>
+        <div class="match">
+            <a href="/team/245/leeds/2022" class="match-home-team">
+                <span class="team-name">لیدز</span>
+                <img src="/medias/teamlogo/Leeds.png" width="27px" alt="لیدز یونایتد">
+            </a>
+            
+            <a href="/match/18205" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">2</span>
+                    <span>-</span>
+                    <span class="away-team-goal">1</span>
+                </div>
+                <div class="xg">
+                    <span class="winner">0.89</span>
+                    <span>-</span>
+                    <span class="loser">1.10</span>
+                </div>
+            </a>
+            
+            <a href="/team/229/wolverhampton-wanderers/2022" class="match-away-team">
+                <img src="/medias/teamlogo/WolverhamptonWanderers.png" width="27px" alt="ولورهمپتون">
+                <span class="team-name">ولوز</span>
+            </a>
+        </div>
+        <div class="match">
+            <a href="/team/86/newcastle-united/2022" class="match-home-team">
+                <span class="team-name">نیوکاسل</span>
+                <img src="/medias/teamlogo/NewcastleUnited.png" width="27px" alt="نیوکاسل یونایتد">
+            </a>
+            
+            <a href="/match/18206" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">2</span>
+                    <span>-</span>
+                    <span class="away-team-goal">0</span>
+                </div>
+                <div class="xg">
+                    <span class="winner">1.86</span>
+                    <span>-</span>
+                    <span class="loser">0.24</span>
+                </div>
+            </a>
+            
+            <a href="/team/249/nottingham-forest/2022" class="match-away-team">
+                <img src="/medias/teamlogo/NottinghamForest.png" width="27px" alt="ناتینگهام فارست">
+                <span class="team-name">فارست</span>
+            </a>
+        </div>
+        <div class="match">
+            <a href="/team/82/tottenham/2022" class="match-home-team">
+                <span class="team-name">تاتنهام</span>
+                <img src="/medias/teamlogo/Tottenham.png" width="27px" alt="تاتنهام هاتسپر">
+            </a>
+            
+            <a href="/match/18207" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">4</span>
+                    <span>-</span>
+                    <span class="away-team-goal">1</span>
+                </div>
+                <div class="xg">
+                    <span class="winner">1.62</span>
+                    <span>-</span>
+                    <span class="loser">0.39</span>
+                </div>
+            </a>
+            
+            <a href="/team/74/southampton/2022" class="match-away-team">
+                <img src="/medias/teamlogo/Southampton.png" width="27px" alt="ساوتهمپتون">
+                <span class="team-name">ساوتهمپتون</span>
+            </a>
+        </div>
+        <div class="match">
+            <a href="/team/72/everton/2022" class="match-home-team">
+                <span class="team-name">اورتون</span>
+                <img src="/medias/teamlogo/Everton.png" width="27px" alt="اورتون">
+            </a>
+            
+            <a href="/match/18208" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">0</span>
+                    <span>-</span>
+                    <span class="away-team-goal">1</span>
+                </div>
+                <div class="xg">
+                    <span class="loser">0.54</span>
+                    <span>-</span>
+                    <span class="winner">1.92</span>
+                </div>
+            </a>
+            
+            <a href="/team/80/chelsea/2022" class="match-away-team">
+                <img src="/medias/teamlogo/Chelsea.png" width="27px" alt="چلسی">
+                <span class="team-name">چلسی</span>
+            </a>
+        </div>
+        
+        
+        <div class="fixtures-date">
+            <span>16 / 05 / 1401</span>
+        </div>
+        
+        <div class="match">
+            <a href="/team/89/manchester-united/2022" class="match-home-team">
+                <span class="team-name">من یونایتد</span>
+                <img src="/medias/teamlogo/ManchesterUnited.png" width="27px" alt="منچستر یونایتد">
+            </a>
+            
+            <a href="/match/18209" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">1</span>
+                    <span>-</span>
+                    <span class="away-team-goal">2</span>
+                </div>
+                <div class="xg">
+                    <span class="loser">1.42</span>
+                    <span>-</span>
+                    <span class="winner">1.73</span>
+                </div>
+            </a>
+            
+            <a href="/team/220/brighton/2022" class="match-away-team">
+                <img src="/medias/teamlogo/Brighton.png" width="27px" alt="برایتون اند هوو آلبیون">
+                <span class="team-name">برایتون</span>
+            </a>
+        </div>
+        <div class="match">
+            <a href="/team/75/leicester/2022" class="match-home-team">
+                <span class="team-name">لستر</span>
+                <img src="/medias/teamlogo/Leicester.png" width="27px" alt="لستر سیتی">
+            </a>
+            
+            <a href="/match/18210" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">2</span>
+                    <span>-</span>
+                    <span class="away-team-goal">2</span>
+                </div>
+                <div class="xg">
+                    <span class="draw">0.46</span>
+                    <span>-</span>
+                    <span class="draw">0.93</span>
+                </div>
+            </a>
+            
+            <a href="/team/244/brentford/2022" class="match-away-team">
+                <img src="/medias/teamlogo/Brentford.png" width="27px" alt="برنتفورد">
+                <span class="team-name">برنتفورد</span>
+            </a>
+        </div>
+        <div class="match">
+            <a href="/team/81/west-ham/2022" class="match-home-team">
+                <span class="team-name">وستهم</span>
+                <img src="/medias/teamlogo/WestHam.png" width="27px" alt="وستهم یونایتد">
+            </a>
+            
+            <a href="/match/18211" class="score status">
+                <div class="goals">
+                    <span class="home-team-goal">0</span>
+                    <span>-</span>
+                    <span class="away-team-goal">2</span>
+                </div>
+                <div class="xg">
+                    <span class="loser">0.25</span>
+                    <span>-</span>
+                    <span class="winner">2.59</span>
+                </div>
+            </a>
+            
+            <a href="/team/88/manchester-city/2022" class="match-away-team">
+                <img src="/medias/teamlogo/ManchesterCity.png" width="27px" alt="منچستر سیتی">
+                <span class="team-name">من سیتی</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+<div class="table" style="display: none;">
+    <table>
+        <thead>
+            <tr style="border: none;">
+                <th>#</th>
+                <th>تیم</th>
+                <th>بازی</th>
+                <th>برد</th>
+                <th>مساوی</th>
+                <th>باخت</th>
+                <th>گل+</th>
+                <th>گل-</th>
+                <th>تفاضل</th>
+                <th>امتیاز</th>
+                <th title="احتمال گل">xG</th>
+                <th title="احتمال گل خورده">xGA</th>
+                <th title="احتمال امتیاز">xPTS</th>
+            </tr>
+        </thead>
+        
+    </table>
+</div>
+<div class="top" style="display: none;">
+    <div class="top-scorer">
+        <table>
+            <caption>برترین گلزنان</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>بازیکن</th>
+                    <th>تیم</th>
+                    <th>گل</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+    <div class="top-assists">
+        <table>
+            <caption>برترین پاسورها</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>بازیکن</th>
+                    <th>تیم</th>
+                    <th>پاس گل</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+    <div class="top-xg">
+        <table>
+            <caption>بیشترین xG</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>بازیکن</th>
+                    <th>تیم</th>
+                    <th>xG</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+    <div class="top-xa">
+        <table>
+            <caption>بیشترین xA</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>بازیکن</th>
+                    <th>تیم</th>
+                    <th>xA</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+    <div class="top-shots">
+        <table>
+            <caption>بیشترین شوت</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>بازیکن</th>
+                    <th>تیم</th>
+                    <th>شوت</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+    <div class="top-shots">
+        <table>
+            <caption>بیشترین پاس کلیدی</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>بازیکن</th>
+                    <th>تیم</th>
+                    <th>پاس</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+    <div class="top-shots">
+        <table>
+            <caption>بیشترین کارت زرد</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>بازیکن</th>
+                    <th>تیم</th>
+                    <th>کارت</th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+</div>
+
+    <script>
+        const navbarToggler = document.getElementById('navbar-toggler-icon');
+        const navbarMobileContent = document.getElementById('navbar-mobile-content');
+        navbarToggler.onclick = function(){
+            if (navbarMobileContent.className === 'navbar-mobile-content'){
+                navbarMobileContent.classList.add('navbar-mobile-show');
+            } else{
+                navbarMobileContent.classList.remove('navbar-mobile-show');
+            }
+        };
+    </script>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#select-fixtures").change(function(){
+                $.ajax({
+                    url: '',
+                    type: 'GET',
+                    data: {
+                        fixtures: $("#select-fixtures").val()
+                    },
+                    success: function(response){
+                        const container = document.querySelector('.container');
+                        const content = document.querySelector('.content');
+                        const match = document.querySelector('.match');
+                        content.parentNode.removeChild(content);
+                        const createContent = document.createElement('div');
+                        createContent.classList.add('content');
+                        container.appendChild(createContent);
+                        for (let i = 0; i < response['match'].length; i++) {
+                            console.log(response['match'][i]['home_p_name']);
+                            console.log(response['match']);
+                            const createMatch = document.createElement('div');
+                            createMatch.classList.add('match');
+                            createContent.appendChild(createMatch);
+                            const teamContainer = document.createElement('div');
+                            teamContainer.classList.add('team-container');
+                            createMatch.appendChild(teamContainer);
+                            const matchInfo = document.createElement('div');
+                            matchInfo.classList.add('match-info');
+                            teamContainer.appendChild(matchInfo);
+                            const matchDate = document.createElement('div');
+                            matchDate.classList.add('match-date');
+                            matchDate.innerHTML = response['match'][i]['date'];
+                            matchInfo.appendChild(matchDate);
+                            const homeTeam = document.createElement('a');
+                            homeTeam.href = '/team/' + response['match'][i]['home_id'] + '/' + response['match'][i]['home_p_name']
+                            homeTeam.classList.add('home-team');
+                            teamContainer.appendChild(homeTeam);
+                            const homeTeamName = document.createElement('span');
+                            homeTeamName.classList.add('team-name');
+                            homeTeamName.innerHTML = response['match'][i]['home_p_name'];
+                            homeTeam.appendChild(homeTeamName);
+                            // const homeTeamLogo = document.createElement('img');
+                            // homeTeamLogo.classList.add('team-logo');
+                            // homeTeamLogo.setAttribute('src', 'https://static.footba11.net/images/teams/logo/3301@0x50.png');
+                            // homeTeam.appendChild(homeTeamLogo);
+                            if (response['match'][i]['home_goal'] != null) {
+                                const score = document.createElement('a');
+                                // score.setAttribute('href', 'match/' + response['match'][i]['id']);
+                                score.href = '/match/' + response['match'][i]['id']
+                                score.classList.add('score');
+                                createMatch.appendChild(score);
+                                const goals = document.createElement('div');
+                                goals.classList.add('goals');
+                                score.appendChild(goals);
+                                const homeTeamGoal = document.createElement('span');
+                                homeTeamGoal.classList.add('home-team-goal');
+                                homeTeamGoal.innerHTML = response['match'][i]['away_goal'];
+                                goals.appendChild(homeTeamGoal);
+                                const dash = document.createElement('span');
+                                dash.innerHTML = ' - ';
+                                goals.appendChild(dash);
+                                const awayTeamGoal = document.createElement('span');
+                                awayTeamGoal.classList.add('away-team-goal');
+                                awayTeamGoal.innerHTML = response['match'][i]['home_goal'];
+                                goals.appendChild(awayTeamGoal);
+                                const xg = document.createElement('div');
+                                xg.classList.add('xg');
+                                score.appendChild(xg);
+                                const homeXg = document.createElement('span');
+                                homeXg.innerHTML = response['match'][i]['away_xg'];
+                                xg.appendChild(homeXg);
+                                const dash02 = document.createElement('span');
+                                dash02.innerHTML = ' - ';
+                                xg.appendChild(dash02);
+                                const awayXg = document.createElement('span');
+                                if (response['match'][i]['away_goal'] > response['match'][i]['home_goal']) {
+                                    homeXg.classList.add('winner');
+                                    awayXg.classList.add('loser');
+                                }
+                                if (response['match'][i]['away_goal'] < response['match'][i]['home_goal']) {
+                                    homeXg.classList.add('loser');
+                                    awayXg.classList.add('winner');
+                                }
+                                if (response['match'][i]['away_goal'] == response['match'][i]['home_goal']) {
+                                    homeXg.classList.add('draw');
+                                    awayXg.classList.add('draw');
+                                }
+                                awayXg.innerHTML = response['match'][i]['home_xg'];
+                                xg.appendChild(awayXg);
+                            } else {
+                                const matchTime = document.createElement('div');
+                                matchTime.innerHTML = response['match'][i]['time'];
+                                createMatch.appendChild(matchTime);
+                            }
+                            const teamContainer02 = document.createElement('div');
+                            teamContainer02.classList.add('team-container');
+                            createMatch.appendChild(teamContainer02);
+                            const awayTeam = document.createElement('a');
+                            awayTeam.href = '/team/' + response['match'][i]['away_id'] + '/' + response['match'][i]['away_p_name']
+                            awayTeam.classList.add('away-team');
+                            teamContainer02.appendChild(awayTeam);
+                            const awayTeamName = document.createElement('span');
+                            awayTeamName.classList.add('team-name');
+                            awayTeamName.innerHTML = response['match'][i]['away_p_name'];
+                            awayTeam.appendChild(awayTeamName);
+                            // const awayTeamLogo = document.createElement('img');
+                            // awayTeamLogo.setAttribute('src', 'https://static.footba11.net/images/teams/logo/2492@0x50.png');
+                            // awayTeamLogo.classList.add('team-logo');
+                            // awayTeam.appendChild(awayTeamLogo);
+                        }
+                    }
+                });
+            });
+
+        });
+        $('#navigation li').click(function() {
+            const container = document.querySelector('.container')
+            const table = document.querySelector('.table');
+            const top = document.querySelector('.top');
+            if (this.innerHTML == 'برنامه بازی ها') {
+                container.style.display = "block";
+                top.style.display = "none";
+                table.style.display = "none";
+            }
+            if (this.innerHTML == 'جدول') {
+                container.style.display = "none";
+                top.style.display = "none";
+                table.style.display = "block";
+            }
+            if (this.innerHTML == 'بازیکنان برتر') {
+                container.style.display = "none";
+                top.style.display = "block";
+                table.style.display = "none";
+            }
+            $('#navigation li').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+</body>
+</html>
