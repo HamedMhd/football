@@ -72,13 +72,29 @@ a{
     box-shadow: #c72727 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
 }
 .fixtures-date{
+    /* width: 50%;
+    margin: 0 25%; */
     background-color: #ddd;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-left-radius: 23px;
+    border-top-right-radius: 23px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 700;
+}
+.fixtures-league{
+    /* background-color: #ddd; */
+    font-weight: 700;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-right: 10px;
+    border-bottom-left-radius: 23px;
+    /* border-top-right-radius: 23px; */
+    border-bottom-right-radius: 23px;
+    border: 2px solid #ddd;
 }
 .league{
     text-align: center;
@@ -104,6 +120,54 @@ a{
     color: #ccac00;
     /* color: rgb(235, 235, 0); */
 }
+/* .match .team-container {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.match .match-info {
+    max-width: 65px;
+    text-align: center;
+    font-size: 12px;
+    line-height: normal;
+    margin-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.match .match-info .match-date {
+    width: 100%;
+    text-align: center;
+}
+.match .match-date, .match .match-time {
+    direction: ltr;
+    font-weight: 700;
+    width: 38px;
+    font-size: 12px;
+    text-align: right;
+    text-overflow: ellipsis;
+    padding-right: 1px;
+}
+.match .home-team {
+    text-align: left;
+    margin-left: 17px;
+}
+.match .away-team, .match .home-team {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.match .away-team .team-name, .match .home-team .team-name {
+    flex: 1;
+    line-height: 20px;
+    direction: rtl;
+}
+.match .home-team img {
+    margin-right: 5px;
+}
+.match img {
+    width: 25px;
+} */
 img {
     border: 0;
     vertical-align: middle;
@@ -158,13 +222,21 @@ td{
     justify-self: right;
 }
 .match{
-    padding: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #dddddd82;
+}
+.match-postponed{
+    color: red;
+    font-weight: 600;
 }
 .goals{
     font-weight: 700;
 }
 .xg{
     font-size: 12px;
+}
+.match a:hover{
+    opacity: 0.5;
 }
 @media only screen and (min-width: 425px) {
     .match {
@@ -180,7 +252,7 @@ td{
     .match {
         display: grid;
         place-items: center;
-        grid-template-columns: 1fr 60px 1fr;
+        grid-template-columns: 1fr 51px 1fr;
         column-gap: 5px;
         user-select: none;
         height: 70px;
@@ -194,6 +266,9 @@ td{
     .xg{
         font-size: 10px;
     }
+    .match-time{
+        font-size: 14px;
+    }
 }
 .status {
     display: grid;
@@ -201,57 +276,49 @@ td{
     justify-items: center;
 }
 .week{
-    display: grid;
-	grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    justify-content: space-between;
+	/* grid-template-columns: repeat(6, 1fr); */
 }
 .week-button{
-    align-self: center;
-    background-color: #fff;
-    background-image: none;
-    background-position: 0 90%;
-    background-repeat: repeat no-repeat;
-    background-size: 4px 3px;
-    border-style: solid;
-    border-width: 2px;
+    border: 2px solid;
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
     box-sizing: border-box;
-    color: #41403e;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Neucha, sans-serif;
-    font-size: 1rem;
-    line-height: 23px;
-    outline: none;
-    margin: 0 5px;
-    text-decoration: none;
     transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
+    /* border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
+    border-top-right-radius: 15px 225px; */
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
     user-select: none;
     touch-action: manipulation;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
 }
 .week-button:hover {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
     transform: translate3d(0, 2px, 0);
 }
 .week-button:focus {
-box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 .week-button:disabled{
     cursor: default;
 }
-.week-button:last-of-type{
-    float: left;
+#league-round{
+    border: none;
 }
-.week span{
+/* .week span{
     grid-column: 2 / 6;
     justify-self: center;
 }
 .per-week-button{
     grid-column: 6;
-}
+} */
 @media only screen and (max-width: 545px) {
     .next-week-button{
         grid-column: 1 / 3;
@@ -836,50 +903,4 @@ box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 .match-shot-info-bottom div ul li:last-child span:first-child{
     margin: 0 0 0 55px;
-}
-.fixture{
-    text-align: center;
-    background-color: #eee;
-}
-.postponed{
-    color: red;
-    margin: 0 10px;
-}
-.top-scorer, .top-assists, .top-xg, .top-xa, .top-shots{
-    display: inline-block;
-    background-color: #fff;
-    width: 48%;
-    border-radius: 10px;
-    text-align: center;
-    margin: 10px;
-}
-@media only screen and (max-width: 1126px) {
-    .top-scorer, .top-assists, .top-xg, .top-xa, .top-shots{
-        display: inline-block;
-        background-color: #fff;
-        width: 47%;
-        border-radius: 10px;
-        text-align: center;
-        margin: 10px;
-    }
-}
-@media only screen and (max-width: 760px) {
-    .top-scorer, .top-assists, .top-xg, .top-xa, .top-shots{
-        display: inline-block;
-        background-color: #fff;
-        width: 95%;
-        border-radius: 10px;
-        text-align: center;
-        margin: 10px;
-    }
-}
-table{
-    border-collapse: collapse;
-    width: 100%;
-}
-/* table tr{
-    border-top: 1px solid #dbd1d1;
-} */
-tr:nth-child(even){
-    background-color: #eee;
 }
