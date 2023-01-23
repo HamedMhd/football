@@ -1,0 +1,224 @@
+.match-detail{
+    margin-top: 12px;
+}
+.home-team, .away-team{
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 23%;
+    vertical-align: top;
+}
+.away-team{
+    float: left;
+}
+.stats{
+    background-color: #fff;
+    border-radius: 10px;
+    display: inline-grid;
+    width: 100%;
+    margin: 20px 0 0 0;
+    /* height: 390px; */
+}
+.stats h3{
+    text-align: center;
+}
+.stats-team-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 56px;
+}
+.stats ul{
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px 21px;
+}
+.stats ul li{
+    border-bottom: 1px #ddd solid;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+}
+.stats ul li:nth-child(even){
+    background-color: #eee;
+}
+.stats ul li:hover{
+    background-color: #ddd;
+}
+.stats ul li:last-of-type{
+    border-bottom: none;
+}
+@media only screen and (min-width: 424px) {
+    .stats ul li{
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        height: 42px;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    .stat-value{
+        border-radius: 13px;
+        padding: 4px 8px;
+        justify-self: center;
+        font-size: 18px;
+        /* color: rgb(111, 163, 230); */
+    }
+}
+@media only screen and (max-width: 424px) {
+    .stats ul{
+        padding: 0 15px;
+    }
+    .stats ul li{
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        height: 42px;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    .stats-team-container{
+        margin: 0 30px;
+    }
+    .stat-value{
+        border-radius: 13px;
+        padding: 4px 8px;
+        justify-self: center;
+        /* color: rgb(111, 163, 230); */
+    }
+}
+.stat-title{
+    justify-self: center;
+    font-weight: 600;
+}
+.player-time{
+    float: left;
+    padding-left: 7px;
+}
+.team-name{
+    text-align: center;
+    margin: 9px;
+}
+.player-position{
+    padding-right: 5px;
+}
+.yellow-card, .red-card{
+    border-radius: 3px;
+}
+svg{
+    vertical-align: middle;
+}
+/* .home-player-shot, .away-player-shot, .home-all-player, .away-all-player{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+tbody tr{
+    border-top: 1px solid #dbd1d1;
+}
+tr:nth-child(even){
+    background-color: #eee;
+}
+th:nth-child(2), td:nth-child(2){
+    text-align: right;
+}
+table{
+    box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);
+} */
+table {
+    /* border-spacing: 1; */
+    border-collapse: collapse;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    /* position: relative; */
+}
+/* table * {
+position: relative;
+} */
+table td, table th {
+padding-left: 8px;
+}
+table thead tr {
+height: 60px;
+/* background: #FFED86; */
+background-color: #1cab75;
+}
+table tbody tr {
+height: 48px;
+border-bottom: 1px solid #E3F1D5;
+}
+table tbody tr:last-child {
+border: 0;
+}
+table td.l, table th.l {
+text-align: right;
+}
+table td.c, table th.c {
+text-align: center;
+}
+table td.r, table th.r {
+text-align: center;
+}
+tr:nth-child(even){
+    background-color: #eee;
+}
+tbody tr:hover{
+    background-color: #ddd;
+}
+.home-all-player td:nth-child(2), .away-all-player td:nth-child(2),
+.home-all-player th:nth-child(2), .away-all-player th:nth-child(2){
+    text-align: right;
+}
+.home-all-player, .away-all-player{
+    overflow: auto;
+    margin: 20px 0 0 0;
+    border-radius: 10px;
+}
+/* @media screen and (max-width: 768px) {
+    table {
+        display: block;
+    }
+    table > *, table tr, table td, table th {
+        display: block;
+    }
+    table thead {
+        display: none;
+    }
+    table tbody tr {
+        height: auto;
+        padding: 8px 0;
+    }
+    table tbody tr td {
+        padding-left: 45%;
+        margin-bottom: 12px;
+    }
+    table tbody tr td:last-child {
+        margin-bottom: 0;
+    }
+    table tbody tr td:after {
+        position: absolute;
+        font-weight: 700;
+        width: 40%;
+        left: 10px;
+        top: 0;
+    }
+    table tbody tr td:nth-child(1):after {
+        content: "Ø¨Ø§Ø²ÛŒÚ©Ù†";
+    }
+    table tbody tr td:nth-child(2):before {
+        content: "Stock";
+    }
+    table tbody tr td:nth-child(3):before {
+        content: "Cap";
+    }
+    table tbody tr td:nth-child(4):before {
+        content: "Inch";
+    }
+    table tbody tr td:nth-child(5):before {
+        content: "Box Type";
+    }
+} */
