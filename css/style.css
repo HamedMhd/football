@@ -46,7 +46,7 @@ a{
     border: 1px solid white;
     margin: auto;
     margin-top: 40px;
-    border-radius: 10px;
+    border-radius: 23px;
 }
 .no-matchs{
     display: flex;
@@ -278,12 +278,12 @@ td{
     row-gap: 5px;
     justify-items: center;
 }
-.week{
+.week, .day{
     display: flex;
     justify-content: space-between;
 	/* grid-template-columns: repeat(6, 1fr); */
 }
-.week-button{
+.week-button, .day-button{
     border: 2px solid;
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
     box-sizing: border-box;
@@ -302,11 +302,15 @@ td{
     align-items: center;
     width: 20%;
 }
-.week-button:hover {
+.day-button{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 23px;
+}
+.week-button:hover, .day-button:hover{
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
     transform: translate3d(0, 2px, 0);
 }
-.week-button:focus {
+.week-button:focus, .day-button:focus{
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 .week-button:disabled{
@@ -343,28 +347,30 @@ td{
     .match-header-top{
         width: 100%;
         height: 100px;
-        display: flex;
-        -webkit-align-items: center;
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        /* -webkit-align-items: center;
         -webkit-box-align: center;
-        -ms-flex-align: center;
+        -ms-flex-align: center; */
         align-items: center;
-        -webkit-box-pack: center;
+        /* -webkit-box-pack: center;
         -ms-flex-pack: center;
-        -webkit-justify-content: center;
+        -webkit-justify-content: center; */
         justify-content: center;
     }
-    .match-header div div:nth-child(2){
-        min-width: 75px;
+    .match-header-top a:first-child{
+        display: grid;
+        justify-content: left;
+    }
+    .match-result{
+        /* min-width: 75px; */
         margin: 0 40px;
         display: grid;
-        grid-auto-rows: 1fr 1fr 1fr;
-        -ms-flex-pack: space-evenly;
-        -webkit-justify-content: space-evenly;
-        justify-content: space-evenly;
+        /* grid-auto-rows: 1fr 1fr 1fr; */
+        /* justify-content: space-evenly; */
         justify-items: center;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        align-items: center;
+        /* align-items: center; */
+        row-gap: 7px;
     }
     .league-header, .team-header{
         width: calc(100% - 20px);
@@ -380,18 +386,16 @@ td{
         padding: 25px 0 0 0;
         justify-items: center;
     }
-    .match-header div div:nth-child(2){
+    .match-result{
         display: grid;
         justify-items: center;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
         align-items: center;
     }
     .match-header-home{
         flex-flow: column-reverse;
     }
-    .match-header-home img{
-        margin: 0;
+    .match-header-home img, .match-header-away img{
+        padding: 0 0 10px 0;
     }
     .match-header-away{
         flex-flow: column;
@@ -442,6 +446,18 @@ td{
     text-align: center;
     font-weight: 700;
 }
+.match-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.match-info ul{
+    display: flex;
+    column-gap: 25px;
+    padding: 0;
+}
 @media only screen and (min-width: 769px) {
     .match-header-home img{
         margin: 0 15px 0 0;
@@ -472,6 +488,15 @@ td{
     margin: 0;
 }
 @media only screen and (max-width: 650px) {
+    .match-info{
+        justify-content: right;
+    }
+    .match-info ul{
+        flex-direction: column;
+    }
+    .match-info ul li{
+        padding: 10px;
+    }
     .event-container-home-item{
         grid-template-columns: 1fr max-content 0fr;
         direction: ltr;
@@ -516,7 +541,6 @@ td{
         display: grid;
         height: 50px;
         padding: 5px 0px;
-        -webkit-box-align: center;
         align-items: center;
         column-gap: 10px;
     }
@@ -529,6 +553,9 @@ td{
     .home-injury-left{
         display: inline;
     }
+}
+.event-container-away a{
+    width: max-content;
 }
 .event-container ul li{
     margin: 0 0 15px 0;
@@ -593,7 +620,7 @@ td{
     -webkit-box-align: center;
     align-items: center;
 }
-.lineup-header-mobile{
+.lineup-header-mobile, .probable-lineup-header-mobile{
     display: none;
 }
 .lineup-header h3{
@@ -619,19 +646,8 @@ td{
     margin: 0 10px;
     font-size: 18px;
 }
-@media only screen and (min-width: 900px) {
-    .lineup-header-away span::before{
-        color: #bac2bb;
-        content: "/";
-        float: left;
-        margin-right: 5px;
-    }
-}
-.lineup-header-home span::before{
-    color: #bac2bb;
-    content: "/";
-    float: right;
-    margin-left: 5px;
+.team-formation{
+    color: #777;
 }
 .lineup-map{
     position: relative;
@@ -728,10 +744,24 @@ td{
     width: inherit;
 }
 .lineup-player-image>div{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
     margin: 0 auto;
     position: relative;
     width: 50px;
+}
+.lineup-player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 100%;
+    border: 1px solid;
+    /* background-color: #334591;
+    color: #fff; */
 }
 .lineup-player-goals{
     display: flex;
@@ -740,7 +770,7 @@ td{
     /* padding: 2px; */
     position: absolute;
     bottom: 0;
-    left: 38px;
+    left: 45px;
 }
 /* .lineup-player-goals div, .lineup-player-assists div{
     width: 16px;
@@ -792,7 +822,7 @@ td{
 .lineup-player-sub{
     display: flex;
     position: absolute;
-    left: 38px;
+    left: 45px;
     top: 0;
     background-color: #fff;
     border-radius: 50%;
@@ -833,6 +863,14 @@ td{
         display: grid;
         justify-items: center;
         padding: 10px;
+    }
+    .probable-lineup-header-mobile{
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        padding: 10px;
+        border-bottom: 1px solid #eeeeee85;
+        /* height: 50px; */
     }
     .lineup-header-away{
         flex-direction: row;
@@ -902,6 +940,10 @@ td{
         width: 100%;
         background-color: #01935b;
         padding-bottom: 2%;
+    }
+    .lineup-player{
+        width: 35px;
+        height: 35px;
     }
     .lineup-players{
         display: flex;
@@ -1000,11 +1042,22 @@ td{
 .match-substitute-players li{
     align-items: center;
     display: flex;
-    padding: 5px 0;
+    padding: 5px;
     position: relative;
     justify-content: space-between;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
+}
+.match-substitute-player>a{
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+}
+.match-substitute-player>a>div{
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    /* color: #4c4c4c; */
 }
 .match-substitute-players li:nth-child(even){
     background-color: #eee;
@@ -1018,6 +1071,67 @@ td{
 .match-substitute-events div{
     padding: 0 5px;
     font-size: 14px;
+}
+.match-team-form{
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0 0 0;
+    padding: 0 0 20px 0;
+}
+.match-team-form > div:nth-child(2){
+    display: flex;
+}
+.match-team-form-header{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    padding: 10px 0;
+}
+.home-match-team-form{
+    border-left: 1px solid #eee;
+}
+.home-match-team-form, .away-match-team-form{
+    width: 50%;
+}
+.match-team-form a{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+.match-team-form a > div{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    width: 55px;
+}
+.form-winner{
+    background-color: #11a36c;
+    color: #fff;
+    border-radius: 7px;
+}
+.form-draw{
+    background-color: #ccac00;
+    color: #fff;
+    border-radius: 7px;
+}
+.form-loser{
+    background-color: #e84545;
+    color: #fff;
+    border-radius: 7px;
+}
+@media only screen and (max-width: 425px) {
+    .match-team-form > div:nth-child(2){
+        flex-direction: column;
+    }
+    .home-match-team-form{
+        border-left: none;
+        border-bottom: 1px solid #eee;
+    }
+    .home-match-team-form, .away-match-team-form{
+        width: 100%;
+        padding: 5px 0;
+    }
 }
 @media only screen and (min-width: 768px) {
     .match-shot-map{
