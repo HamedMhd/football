@@ -244,7 +244,7 @@ span.team-name{
     font-size: 18px;
 }
 .match-goals .home-goal, .match-goals .away-goal{
-    font-family: 'Fredoka One', cursive;
+    font-family: cursive;
     font-weight: 700;
     font-size: 26px;
     width: 38px;
